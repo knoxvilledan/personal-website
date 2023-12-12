@@ -40,24 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const butterflies = document.querySelectorAll(".butterfly");
-
-butterflies.forEach(function (butterfly) {
-  butterfly.addEventListener("mouseover", function () {
-    this.style.opacity = "0"; // Fades out the butterfly
-    this.style.transform = "translate(10px, -50px)"; // Moves butterfly up and to the right
-    //this.style.animation = 'none';
-  });
-  butterfly.addEventListener("mouseleave", function () {
-    this.style.opacity = "1"; // Fades in the butterfly
-    this.style.transform = "translate(0, 0)"; // Moves butterfly back to original position
-    this.style.display = "inline-block"; // Ensures the butterfly is visible
-    setTimeout(() => {
-      this.style.animation = "flutter 1s ease-in-out infinite"; // Reapply flutter animation
-    }, 2000);
-  });
-});
-
 function getRandomHexColor() {
   const hex = Math.floor(Math.random() * 0xffffff);
   return `#${hex.toString(16).padStart(6, "0")}`;
