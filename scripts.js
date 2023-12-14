@@ -1,3 +1,4 @@
+// Section Typing
 function typeWriter(
   element,
   textArray,
@@ -40,14 +41,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Section Text Color H
+
 function getRandomHexColor() {
   const hex = Math.floor(Math.random() * 0xffffff);
   return `#${hex.toString(16).padStart(6, "0")}`;
 }
-const longestLineDuration = 2000;
+const longestLineDuration = 3000;
 
 function changeTextColor() {
-  const textElements = document.querySelectorAll("p");
+  const textElements = document.querySelectorAll("h2, h3");
   const randomColor = getRandomHexColor();
 
   textElements.forEach((element) => {
@@ -55,6 +58,8 @@ function changeTextColor() {
   });
 }
 setInterval(changeTextColor, longestLineDuration);
+
+// Section Form
 
 document.addEventListener("DOMContentLoaded", function () {
   var form = document.querySelector("#contact .contact-form");
