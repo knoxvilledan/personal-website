@@ -16,7 +16,6 @@ body {
 
 header {
   display: flex;
-
   justify-content: space-around;
   align-items: center;
   background: silver;
@@ -95,6 +94,16 @@ nav ul li a:hover {
 #gallery:hover {
   transform: translateY(-5px);
 }
+#contact {
+  display: flex;
+  flex-grow: 0;
+  margin: 100px;
+  padding: 20px;
+  background-color: black;
+  border-radius: 5px;
+  justify-content: center;
+  transition: transform 0.3s;
+}
 
 @media (max-width: 600px) {
   .main-section {
@@ -159,6 +168,7 @@ p {
   width: 100%;
   padding: 10px;
 }
+
 #contact input[type="submit"] {
   background-color: silver;
   color: black;
@@ -166,9 +176,11 @@ p {
 #contact input[type="submit"]:hover {
   background-color: #4caf50;
 }
+
 footer {
   background-color: silver;
   color: #333;
   text-align: center;
   padding: 20px 0;
+  width: 100%;
 }
